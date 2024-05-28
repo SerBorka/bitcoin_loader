@@ -116,6 +116,7 @@ if os.path.exists(state_file):
     with open(state_file, 'r') as f:
         last_saved_block = int(f.read().strip())
     start_block = last_saved_block + 1
+    print(f"Продолжаем скачивание с блока {start_block}")
 
 # Load existing transactions if intermediate file exists
 if os.path.exists(intermediate_df_name):
