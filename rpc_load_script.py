@@ -133,7 +133,7 @@ for bn in range(start_block, end_block):
     for tx in new_txs:
         tx['blockNumber'] = bn  # Add block number to each transaction
     txs.extend(new_txs)
-    if (bn - start_block) % 2 == 0 or bn == end_block - 1:
+    if (bn - start_block) % 10 == 0 or bn == end_block - 1:
         fulldf = pd.DataFrame(txs)
         fulldf.to_csv(intermediate_df_name, index=False)
         print(f"Последний скачанный блок: {bn}. Сохранение.")
